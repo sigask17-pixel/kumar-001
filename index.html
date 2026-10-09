@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Kumar 001 — Your AI Friend</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="avatar">K</div>
+      <div>
+        <h1>Kumar 001</h1>
+        <p><span class="status-dot"></span> Your AI Friend</p>
+      </div>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite" aria-label="Chat messages">
+      <div class="message bot">Hi! I'm Kumar 001. 👋<br>I'm here to listen, help you think, and share ideas. How can I help today?</div>
+    </section>
+
+    <form id="chatForm" class="composer">
+      <label class="sr-only" for="userInput">Message Kumar 001</label>
+      <input id="userInput" name="message" type="text" placeholder="Message Kumar 001..." autocomplete="off" required>
+      <button type="submit" aria-label="Send message">Send ➤</button>
+    </form>
+    <p class="hint">Starter version · Replies are local demo responses, not a connected AI model yet.</p>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>

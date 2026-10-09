@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; --bg: #0b1220; --panel: #111c2e; --line: #26354b; --text: #edf4ff; --muted: #9eacc2; --accent: #6c8cff; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at top, #182a46, var(--bg) 55%); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; display: flex; justify-content: center; padding: 18px; }
+.app { width: 100%; max-width: 760px; min-height: calc(100vh - 36px); display: flex; flex-direction: column; background: rgba(17,28,46,.94); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; box-shadow: 0 20px 60px #0005; }
+.topbar { display: flex; align-items: center; gap: 13px; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.avatar { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 16px; background: linear-gradient(135deg, #7396ff, #8b5cf6); font-weight: 800; font-size: 22px; }
+h1 { font-size: 18px; margin: 0 0 4px; }
+.topbar p { color: var(--muted); font-size: 13px; margin: 0; }
+.status-dot { display: inline-block; width: 8px; height: 8px; background: #4ade80; border-radius: 50%; margin-right: 5px; }
+.messages { flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 22px 16px; overflow-y: auto; min-height: 300px; }
+.message { max-width: 88%; padding: 13px 15px; border-radius: 17px; line-height: 1.5; overflow-wrap: anywhere; }
+.message.bot { align-self: flex-start; background: #1b2a41; border: 1px solid #2a3d59; border-bottom-left-radius: 5px; }
+.message.user { align-self: flex-end; background: #4d6fe8; color: white; border-bottom-right-radius: 5px; }
+.composer { display: flex; gap: 10px; padding: 14px; border-top: 1px solid var(--line); }
+.composer input { min-width: 0; flex: 1; padding: 14px 15px; color: var(--text); background: #0b1423; border: 1px solid #30415a; border-radius: 14px; outline: none; font: inherit; }
+.composer input:focus { border-color: var(--accent); }
+.composer button { border: 0; border-radius: 14px; padding: 0 18px; background: var(--accent); color: white; font-weight: 700; font: inherit; cursor: pointer; }
+.composer button:active { transform: scale(.98); }
+.hint { margin: 0; padding: 0 16px 15px; color: var(--muted); font-size: 11px; text-align: center; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 480px) { body { padding: 0; } .app { min-height: 100vh; border-radius: 0; border: 0; } .message { max-width: 94%; } }
